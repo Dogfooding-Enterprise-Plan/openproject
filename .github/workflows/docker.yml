@@ -143,7 +143,7 @@ jobs:
         run: |
           cp ./docker/prod/Dockerfile ./Dockerfile
       - name: Download precompiled public assets
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: public-assets-${{ github.sha }}
           path: public/
@@ -259,7 +259,7 @@ jobs:
           overwrite: true
           name: "merged-digests-${{ matrix.target }}-${{ github.run_number }}-${{ github.run_attempt }}"
       - name: Download digests
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: "merged-digests-${{ matrix.target }}-${{ github.run_number }}-${{ github.run_attempt }}"
           path: /tmp/digests
