@@ -43,7 +43,7 @@ jobs:
       run: |
         cp ./docker/pullpreview/docker-compose.yml ./docker-compose.pullpreview.yml
         cp ./docker/prod/Dockerfile ./Dockerfile
-    - uses: pullpreview/action@v5
+    - uses: pullpreview/action@v6
       with:
         admins: crohr,HDinger,machisuji,oliverguenther,ulferts,wielinde,cbliard
         compose_files: docker-compose.pullpreview.yml
